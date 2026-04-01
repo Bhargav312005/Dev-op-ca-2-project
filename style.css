@@ -1,50 +1,131 @@
-body{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #dbeafe, #bfdbfe);
-    margin:0;
-    padding:0;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-select{
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-    border:1px solid #ccc;
-    border-radius:5px;
-    transition:0.3s;
+/* BODY */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-input:focus, select:focus{
-    border-color:#007BFF;
-    outline:none;
-    box-shadow:0 0 5px rgba(0,123,255,0.5);
+/* CONTAINER */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 420px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-input[type="submit"]{
-    width:100%;
-    padding:12px;
-    background:linear-gradient(to right, #007BFF, #0056b3);
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:16px;
-    transition:0.3s;
+/* TITLE */
+.form-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-input[type="submit"]:hover{
-    background:linear-gradient(to right, #0056b3, #003d80);
+/* FORM GROUP */
+.form-group {
+  margin-bottom: 15px;
 }
 
-/* Extra Styling */
-.form-box:hover{
-    transform:scale(1.01);
-    transition:0.3s;
+/* LABEL */
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-input[type="radio"]{
-    margin-right:5px;
+/* INPUTS */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-size: 14px;
+}
+
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder {
+  color: #ddd;
+}
+
+/* FOCUS EFFECT */
+input:focus, select:focus, textarea:focus {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+
+/* RADIO GROUP */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* BUTTONS */
+button {
+  width: 48%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* BUTTON GROUP */
+button[type="submit"] {
+  background: #00c9ff;
+  color: black;
+}
+
+button[type="reset"] {
+  background: #ff6b6b;
+  color: white;
+}
+
+/* HOVER */
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ERROR */
+.error-msg {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* SUCCESS BOX */
+.success-box {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(0,255,150,0.2);
+  border-radius: 8px;
+  text-align: center;
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media(max-width: 500px) {
+  .container {
+    width: 90%;
+  }
 }

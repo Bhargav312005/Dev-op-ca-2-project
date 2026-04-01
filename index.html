@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhargav Sor Feedback Form</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.form-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.error-msg {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.success-box {
+  display: none;
+  background: #d4edda;
+  padding: 10px;
+  margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2 class="form-title">Bhargav Sor - Feedback Form</h2>
+
+<form id="feedbackForm">
+
+<div class="form-group">
+<label>Name</label>
+<input type="text" id="studentName">
+<div class="error-msg" id="nameError">Name required</div>
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input type="email" id="emailId">
+<div class="error-msg" id="emailError">Invalid email</div>
+</div>
+
+<div class="form-group">
+<label>Phone</label>
+<input type="text" id="mobileNum">
+<div class="error-msg" id="mobileError">Enter 10 digit number</div>
+</div>
+
+<div class="form-group">
+<label>Department</label>
+<select id="department">
+<option value="">Select</option>
+<option value="CSE">CSE</option>
+<option value="IT">IT</option>
+</select>
+<div class="error-msg" id="deptError">Select department</div>
+</div>
+
+<div class="form-group">
+<label>Gender</label>
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+<div class="error-msg" id="genderError">Select gender</div>
+</div>
+
+<div class="form-group">
+<label>Feedback</label>
+<textarea id="feedback"></textarea>
+<div class="error-msg" id="feedbackError">Minimum 10 words</div>
+</div>
+
+<button type="submit" id="submitBtn" onclick="return validateForm()">Submit</button>
+<button type="reset" id="resetBtn">Reset</button>
+
+<div class="success-box" id="successMsg">
+✅ Feedback submitted successfully
+</div>
+
+</form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
